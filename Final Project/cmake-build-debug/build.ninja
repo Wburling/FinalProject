@@ -56,6 +56,13 @@ build CMakeFiles/Final_Project.dir/main.cpp.o: CXX_COMPILER__Final_Project_Debug
   OBJECT_DIR = CMakeFiles/Final_Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Final_Project.dir
 
+build CMakeFiles/Final_Project.dir/tictactoe.cpp.o: CXX_COMPILER__Final_Project_Debug /home/wyatt/Documents/GitHub/finalProject/Final$ Project/tictactoe.cpp || cmake_object_order_depends_target_Final_Project
+  DEP_FILE = CMakeFiles/Final_Project.dir/tictactoe.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/wyatt/Documents/GitHub/SFML/include
+  OBJECT_DIR = CMakeFiles/Final_Project.dir
+  OBJECT_FILE_DIR = CMakeFiles/Final_Project.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Final_Project
@@ -64,7 +71,7 @@ build CMakeFiles/Final_Project.dir/main.cpp.o: CXX_COMPILER__Final_Project_Debug
 #############################################
 # Link the executable Final_Project
 
-build Final_Project: CXX_EXECUTABLE_LINKER__Final_Project_Debug CMakeFiles/Final_Project.dir/main.cpp.o
+build Final_Project: CXX_EXECUTABLE_LINKER__Final_Project_Debug CMakeFiles/Final_Project.dir/main.cpp.o CMakeFiles/Final_Project.dir/tictactoe.cpp.o
   FLAGS = -g
   LINK_LIBRARIES = -lsfml-system  -lsfml-window  -lsfml-graphics  -lsfml-audio
   OBJECT_DIR = CMakeFiles/Final_Project.dir
