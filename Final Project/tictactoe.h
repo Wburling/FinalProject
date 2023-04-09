@@ -20,7 +20,20 @@ bool isFull(const char board[][NUM_COLS]);
 void getMove(int player, int move[], char board[][NUM_COLS]);
 // Class for GUI
 class TicTacToe: public sf::Drawable {
+public:
 TicTacToe() {
-
+    if (!mTexture.loadFromFile("black.jpg"))
+    {
+        std::cout<<"Error opening file\n";
+        exit(1);
+    }
+    mSprite.setTexture(mTexture);
+    //get size of image
+    sf::Vector2u imageSize=mTexture.getSize();
+    draw(mSprite,)
 }
+    virtual void draw(sf::RenderTarget& target,sf::RenderStates states) const;
+private:
+    sf::Sprite mSprite;
+    sf::Texture mTexture;
 };
