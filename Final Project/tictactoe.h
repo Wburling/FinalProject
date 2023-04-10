@@ -23,6 +23,9 @@ class TicTacToe {
 public:
 TicTacToe() : TicTacToe("black.jpg") {}
 TicTacToe(const string& fileName) {
+    if (fileName == "black.jpg") {
+
+    }
     if (!mTexture.loadFromFile(fileName))
     {
         std::cout<<"Error opening file\n";

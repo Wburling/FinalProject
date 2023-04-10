@@ -9,7 +9,7 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(1000, 800), "Tic Tac Toe!");
-   // TicTacToe Background;
+   TicTacToe Background;
     TicTacToe board("Tic-tac-toe.png");
     while (window.isOpen())
     {
@@ -21,7 +21,7 @@ int main() {
                 window.close();
         }
         window.clear();
-       // Background.draw(&window);
+       Background.draw(&window);
         board.draw(&window);
         window.display();
     }
