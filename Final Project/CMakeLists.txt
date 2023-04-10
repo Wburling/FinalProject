@@ -7,6 +7,7 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Tic-tac-toe.png DESTINATION ${CMAKE_BINARY
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/Villa.ttf DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/X.png DESTINATION ${CMAKE_BINARY_DIR})
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/O.png DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/grayBox.png DESTINATION ${CMAKE_BINARY_DIR})
 add_executable(Final_Project main.cpp tictactoe.cpp tictactoe.h AnimationMainTest.cpp)
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR /home/wyatt/Documents/GitHub/SFML/lib/cmake/SFML/)
