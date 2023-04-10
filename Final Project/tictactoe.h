@@ -19,21 +19,25 @@ bool isWin(const char board[][NUM_COLS],char playerToken);
 bool isFull(const char board[][NUM_COLS]);
 void getMove(int player, int move[], char board[][NUM_COLS]);
 // Class for GUI
-class TicTacToe: public sf::Drawable {
+class TicTacToe {
 public:
-TicTacToe() {
-    if (!mTexture.loadFromFile("black.jpg"))
+TicTacToe() : TicTacToe("black.jpg") {}
+TicTacToe(const string& fileName) {
+    if (!mTexture.loadFromFile(fileName))
     {
         std::cout<<"Error opening file\n";
         exit(1);
     }
     mSprite.setTexture(mTexture);
     //get size of image
-    sf::Vector2u imageSize=mTexture.getSize();
-    draw(mSprite,)
+    imageSize=mTexture.getSize();
+    mSprite.setOrigin(imageSize.x/2, imageSize.y/2);
+    mSprite.setScale(1,1);
+
 }
-    virtual void draw(sf::RenderTarget& target,sf::RenderStates states) const;
+    void draw(sf::RenderWindow* window);
 private:
     sf::Sprite mSprite;
     sf::Texture mTexture;
+    sf::Vector2u imageSize;
 };
