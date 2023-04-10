@@ -63,11 +63,13 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare) {
     void draw(sf::RenderWindow* window);
     void update(sf::Event& e, sf::RenderWindow& window);
     void replace(sf::Sprite* sprite);
+    bool check(sf::Sprite* sprite);
 private:
     sf::Sprite mSprite;
     sf::Texture mTexture;
     sf::Vector2u imageSize;
     sf::Font mFont;
     sf:: Text mText;
-    bool pressed = false;
+
 };
+
