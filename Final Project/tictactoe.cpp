@@ -36,6 +36,7 @@ if(mouseInButton)
 turnCount++;
 std::cout << "Pressed" << endl;
 replace(&mSprite);
+alreadyPassed = true;
 }
 else
 {
@@ -61,21 +62,22 @@ mSprite.setRotation(0);
 }
 }
 }
-
 void TicTacToe::replace(sf::Sprite* sprite) {
         sf::Texture &textures = *(new sf::Texture);
-        if (turnCount % 2 != 0) {
-            textures.loadFromFile("X.png");
-            sprite->setTexture(textures);
-            sprite->setOrigin(imageSize.x / 2, imageSize.y / 2);
-            sprite->setColor(sf::Color::White);
-            cout << "X" << endl;
-        } else {
-            textures.loadFromFile("O.png");
-            sprite->setTexture(textures);
-            sprite->setOrigin(imageSize.x / 2, imageSize.y / 2);
-            mSprite.setColor(sf::Color::White);
-            cout << "O" << endl;
+        if (alreadyPassed != true) {
+            if (turnCount % 2 != 0) {
+                textures.loadFromFile("X.png");
+                sprite->setTexture(textures);
+                sprite->setOrigin(imageSize.x / 2, imageSize.y / 2);
+                sprite->setColor(sf::Color::White);
+                cout << "X" << endl;
+            } else {
+                textures.loadFromFile("O.png");
+                sprite->setTexture(textures);
+                sprite->setOrigin(imageSize.x / 2, imageSize.y / 2);
+                mSprite.setColor(sf::Color::White);
+                cout << "O" << endl;
+            }
         }
 
 }

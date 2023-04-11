@@ -70,6 +70,7 @@ private:
     sf::Vector2u imageSize;
     sf::Font mFont;
     sf:: Text mText;
+    bool alreadyPassed = false;
 
 };
 
