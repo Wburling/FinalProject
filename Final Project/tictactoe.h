@@ -13,9 +13,9 @@
 using namespace std;
 
 // Class for GUI
+
 class TicTacToe {
 public:
-
 TicTacToe() : TicTacToe("black.jpg") {}
 TicTacToe(const string& fileName) {
     if (fileName == "black.jpg") {

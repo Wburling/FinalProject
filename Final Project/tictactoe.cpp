@@ -33,7 +33,6 @@ if(e.mouseButton.button==sf::Mouse::Left)
 if(mouseInButton)
 {
 //mSprite.setScale(0,0);
-turnCount++;
 std::cout << "Pressed" << endl;
 replace(&mSprite);
 alreadyPassed = true;
@@ -65,6 +64,7 @@ mSprite.setRotation(0);
 void TicTacToe::replace(sf::Sprite* sprite) {
         sf::Texture &textures = *(new sf::Texture);
         if (alreadyPassed != true) {
+            turnCount++;
             if (turnCount % 2 != 0) {
                 textures.loadFromFile("X.png");
                 sprite->setTexture(textures);
