@@ -17,6 +17,9 @@ int main() {
     TicTacToe grayBox4("grayBox.png", 313, 404, 0.6);
     TicTacToe grayBox5("grayBox.png", 500, 404, 0.6);
     TicTacToe grayBox6("grayBox.png", 687, 404, 0.6);
+    TicTacToe grayBox7("grayBox.png", 313, 593, 0.6);
+    TicTacToe grayBox8("grayBox.png", 500, 593, 0.6);
+    TicTacToe grayBox9("grayBox.png", 687, 593, 0.6);
     while (window.isOpen())
     {
         sf::Event event;
@@ -31,6 +34,9 @@ int main() {
             grayBox4.update(event,window);
             grayBox5.update(event,window);
             grayBox6.update(event,window);
+            grayBox7.update(event,window);
+            grayBox8.update(event,window);
+            grayBox9.update(event,window);
         }
         window.clear();
        Background.draw(&window);
@@ -41,6 +47,9 @@ int main() {
         grayBox4.draw(&window);
         grayBox5.draw(&window);
         grayBox6.draw(&window);
+        grayBox7.draw(&window);
+        grayBox8.draw(&window);
+        grayBox9.draw(&window);
         window.display();
     }
 }

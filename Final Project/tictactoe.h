@@ -32,7 +32,7 @@ TicTacToe(const string& fileName) {
         //set position at the middle of the button
         mText.setPosition(500,35);
         //choose colors
-        mText.setFillColor(sf::Color::White);
+        mText.setFillColor(sf::Color::Black);
     }
 
     if (!mTexture.loadFromFile(fileName))
@@ -63,7 +63,6 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare) {
     void draw(sf::RenderWindow* window);
     void update(sf::Event& e, sf::RenderWindow& window);
     void replace(sf::Sprite* sprite);
-    bool check(sf::Sprite* sprite);
 private:
     sf::Sprite mSprite;
     sf::Texture mTexture;
@@ -71,6 +70,5 @@ private:
     sf::Font mFont;
     sf:: Text mText;
     bool alreadyPassed = false;
-
 };
 
