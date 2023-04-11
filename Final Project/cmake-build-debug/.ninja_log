@@ -1,11 +1,14 @@
 # ninja log v5
-1	622	1681145021019553240	CMakeFiles/Final_Project.dir/tictactoe.cpp.o	89cb1f51d409ed47
-0	22	1681153017726062953	build.ninja	6075452753d598b7
-667	763	1681145021159553240	Final_Project	db206b7307275eee
-1	18	1681142494726553511	CMakeFiles/Final_Project.dir/main.cpp.o	dae4c38de2d31ba0
-1	667	1681145021065553240	CMakeFiles/Final_Project.dir/AnimationMainTest.cpp.o	84dea01ccb6a08c7
-5	33	1681153017726062953	build.ninja	6075452753d598b7
+1	605	1681175437837818786	CMakeFiles/Final_Project.dir/tictactoe.cpp.o	89cb1f51d409ed47
+5	33	1681175520704816698	build.ninja	6075452753d598b7
+605	703	1681175437934818784	Final_Project	db206b7307275eee
 1	142	1681153017875062952	CMakeFiles/Final_Project.dir/main.cpp.o	dae4c38de2d31ba0
-1	712	1681153018444062950	CMakeFiles/Final_Project.dir/tictactoe.cpp.o	89cb1f51d409ed47
-1	773	1681153018505062950	CMakeFiles/Final_Project.dir/AnimationMainTest.cpp.o	84dea01ccb6a08c7
-773	921	1681153018652062949	Final_Project	db206b7307275eee
+2	818	1681175308885822036	CMakeFiles/Final_Project.dir/AnimationMainTest.cpp.o	84dea01ccb6a08c7
+1	603	1681175577560815265	CMakeFiles/Final_Project.dir/tictactoe.cpp.o	89cb1f51d409ed47
+2	637	1681175577595815264	CMakeFiles/Final_Project.dir/AnimationMainTest.cpp.o	84dea01ccb6a08c7
+638	734	1681175577690815262	Final_Project	db206b7307275eee
+1	617	1681175736382811263	CMakeFiles/Final_Project.dir/tictactoe.cpp.o	89cb1f51d409ed47
+1	657	1681175736421811262	CMakeFiles/Final_Project.dir/AnimationMainTest.cpp.o	84dea01ccb6a08c7
+657	770	1681175736534811259	Final_Project	db206b7307275eee
+1	660	1681175777358810230	CMakeFiles/Final_Project.dir/AnimationMainTest.cpp.o	84dea01ccb6a08c7
+661	769	1681175777467810228	Final_Project	db206b7307275eee
