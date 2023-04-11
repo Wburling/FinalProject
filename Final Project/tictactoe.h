@@ -26,7 +26,7 @@ TicTacToe(const string& fileName) {
         }
         mText.setFont(mFont);
         mText.setCharacterSize(30);
-        mText.setString("Select a starting position!");
+        mText.setString("Place among the Gray Squares!");
         //set origin to the middle
         mText.setOrigin(mText.getGlobalBounds().width/2, mText.getGlobalBounds().height/2);
         //set position at the middle of the button
@@ -61,6 +61,23 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare, int id) {
     mSprite.setScale(scaleSquare,scaleSquare);
     mSprite.setPosition(x,y);
 }
+    TicTacToe(const string& fileName, int i) {
+    mTexture.loadFromFile(fileName);
+    mSprite.setTexture(mTexture);
+    mFont.loadFromFile("Villa.ttf");
+    mText.setFont(mFont);
+    mText.setCharacterSize(30);
+    string word;
+    if (i != 3)
+    word = "Player " + to_string(i) + " Won!!!";
+    else
+        word = "Cat Scratch!!!";
+    mText.setString(word);
+        mText.setOrigin(mText.getGlobalBounds().width/2, mText.getGlobalBounds().height/2);
+        mText.setPosition(500,400);
+        mText.setFillColor(sf::Color::Black);
+
+}
     void draw(sf::RenderWindow* window);
     void update(sf::Event& e, sf::RenderWindow& window);
     void replace(sf::Sprite* sprite);
@@ -74,4 +91,7 @@ private:
     bool alreadyPassed = false;
     int identity;
 };
+
+void start();
+
 
