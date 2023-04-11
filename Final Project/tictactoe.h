@@ -47,7 +47,8 @@ TicTacToe(const string& fileName) {
     mSprite.setScale(1,1);
     mSprite.setPosition(500, 400);
 }
-TicTacToe(const string& fileName, float x, float y, float scaleSquare) {
+TicTacToe(const string& fileName, float x, float y, float scaleSquare, int id) {
+    identity = id;
     if (!mTexture.loadFromFile(fileName))
     {
         std::cout<<"Error opening file\n";
@@ -63,6 +64,7 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare) {
     void draw(sf::RenderWindow* window);
     void update(sf::Event& e, sf::RenderWindow& window);
     void replace(sf::Sprite* sprite);
+    void CheckWin();
 private:
     sf::Sprite mSprite;
     sf::Texture mTexture;
@@ -70,5 +72,6 @@ private:
     sf::Font mFont;
     sf:: Text mText;
     bool alreadyPassed = false;
+    int identity;
 };
 

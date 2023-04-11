@@ -11,15 +11,15 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(1000, 800), "Tic Tac Toe!");
    TicTacToe Background;
     TicTacToe board("Tic-tac-toe.png");
-    TicTacToe grayBox("grayBox.png", 313, 215, 0.6);
-    TicTacToe grayBox2("grayBox.png", 500, 215, 0.6);
-    TicTacToe grayBox3("grayBox.png", 687, 215, 0.6);
-    TicTacToe grayBox4("grayBox.png", 313, 404, 0.6);
-    TicTacToe grayBox5("grayBox.png", 500, 404, 0.6);
-    TicTacToe grayBox6("grayBox.png", 687, 404, 0.6);
-    TicTacToe grayBox7("grayBox.png", 313, 593, 0.6);
-    TicTacToe grayBox8("grayBox.png", 500, 593, 0.6);
-    TicTacToe grayBox9("grayBox.png", 687, 593, 0.6);
+    TicTacToe grayBox("grayBox.png", 313, 215, 0.6, 1);
+    TicTacToe grayBox2("grayBox.png", 500, 215, 0.6, 2);
+    TicTacToe grayBox3("grayBox.png", 687, 215, 0.6, 3);
+    TicTacToe grayBox4("grayBox.png", 313, 404, 0.6,4);
+    TicTacToe grayBox5("grayBox.png", 500, 404, 0.6,5);
+    TicTacToe grayBox6("grayBox.png", 687, 404, 0.6,6);
+    TicTacToe grayBox7("grayBox.png", 313, 593, 0.6,7);
+    TicTacToe grayBox8("grayBox.png", 500, 593, 0.6,8);
+    TicTacToe grayBox9("grayBox.png", 687, 593, 0.6,9);
     while (window.isOpen())
     {
         sf::Event event;
