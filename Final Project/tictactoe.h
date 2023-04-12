@@ -16,6 +16,7 @@ using namespace std;
 
 class TicTacToe {
 public:
+    //Background Constructor
 TicTacToe() : TicTacToe("black.jpg") {}
 TicTacToe(const string& fileName) {
     if (fileName == "black.jpg") {
@@ -47,6 +48,7 @@ TicTacToe(const string& fileName) {
     mSprite.setScale(1,1);
     mSprite.setPosition(500, 400);
 }
+//Gray spaces constructor
 TicTacToe(const string& fileName, float x, float y, float scaleSquare, int id) {
     identity = id;
     if (!mTexture.loadFromFile(fileName))
@@ -61,6 +63,7 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare, int id) {
     mSprite.setScale(scaleSquare,scaleSquare);
     mSprite.setPosition(x,y);
 }
+// Winning Screen Constructor
     TicTacToe(const string& fileName, int i) {
     mTexture.loadFromFile(fileName);
     mSprite.setTexture(mTexture);
@@ -78,6 +81,7 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare, int id) {
         mText.setFillColor(sf::Color::Black);
 
 }
+//Display Player Turn Constructor
 TicTacToe(const string& fileName, int count, int player ) {
     mTexture.loadFromFile(fileName);
     mSprite.setTexture(mTexture);
@@ -95,9 +99,13 @@ TicTacToe(const string& fileName, int count, int player ) {
     mText.setPosition(120,725);
     mText.setFillColor(sf::Color::Black);
 }
+    //Drawing the image to the window
     void draw(sf::RenderWindow* window);
+    //Updating live for choosing a space
     void update(sf::Event& e, sf::RenderWindow& window);
+    //Replacing the gray space with an x or o
     void replace(sf::Sprite* sprite);
+    //Checking if the player won or had a tie.
     void CheckWin();
 private:
     sf::Sprite mSprite;
@@ -108,7 +116,6 @@ private:
     bool alreadyPassed = false;
     int identity;
 };
-
 void start();
 
 
