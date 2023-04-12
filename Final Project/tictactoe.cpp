@@ -167,12 +167,12 @@ void TicTacToe::CheckWin() {
                 if (checker1 ==3) {
                     cout << "Player 1 wins" << endl;
                     whoWon = 1;
-
-                }
-                else {
-                    cat++;
+                    break;
                 }
             }
+        }
+        if(whoWon == 0) {
+            cat++;
         }
         for (int i = 0; i < 8; i++) {
             checker2=0;
@@ -186,11 +186,12 @@ void TicTacToe::CheckWin() {
                 if (checker2 == 3) {
                     cout << "Player 2 wins" << endl;
                     whoWon = 2;
-                }
-                else {
-                    cat++;
+                    break;
                 }
             }
+        }
+        if(whoWon == 0) {
+            cat++;
         }
     }
     else {
@@ -227,6 +228,9 @@ void TicTacToe::CheckWin() {
             }
         }
     }
+
+    cout << whoWon << " is whoWon" << endl;
+    cout << cat << endl;
     if(cat >=2) {
         whoWon = 3;
     }
