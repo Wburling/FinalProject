@@ -12,6 +12,8 @@ void start() {
     TicTacToe Background;
     TicTacToe Player1("black.jpg", 1);
     TicTacToe Player2("black.jpg", 2);
+    TicTacToe Player1Display("small.jpg", 0, 1);
+    TicTacToe Player2Display("small.jpg", 0, 2);
     TicTacToe PlayerCat("black.jpg",3);
     TicTacToe board("Tic-tac-toe.png");
     TicTacToe playerTurn("grayBox.png", 35,35,0.6,10);
@@ -63,7 +65,12 @@ void start() {
         if(whoWon == 3) {
             PlayerCat.draw(&window);
         }
-
+        if(whoWon == 0) {
+            if (turnCount % 2 != 0)
+                Player2Display.draw(&window);
+            if (turnCount % 2 == 0)
+                Player1Display.draw(&window);
+        }
         window.display();
     }
 }
