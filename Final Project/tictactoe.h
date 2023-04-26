@@ -83,21 +83,31 @@ TicTacToe(const string& fileName, float x, float y, float scaleSquare, int id) {
 }
 //Display Player Turn Constructor
 TicTacToe(const string& fileName, int count, int player ) {
+
     mTexture.loadFromFile(fileName);
     mSprite.setTexture(mTexture);
     mFont.loadFromFile("Villa.ttf");
     mText.setFont(mFont);
     mText.setCharacterSize(30);
-    string word;
-    word = "Player " + to_string(player);
-    if(player == 1)
-        word = word + " \"X\":";
-    if(player == 2)
-        word = word + " \"O\":";
-    mText.setString(word);
-    mText.setOrigin(mText.getGlobalBounds().width/2, mText.getGlobalBounds().height/2);
-    mText.setPosition(120,725);
-    mText.setFillColor(sf::Color::Black);
+    if (fileName == "grayBox.png") {
+        mSprite.scale(0,0);
+        mText.setString("Press this text to Replay");
+        mText.setOrigin(mText.getGlobalBounds().width / 2, mText.getGlobalBounds().height / 2);
+        mText.setPosition(500,600);
+        mText.setFillColor(sf::Color::Black);
+    }
+    else {
+        string word;
+        word = "Player " + to_string(player);
+        if (player == 1)
+            word = word + " \"X\":";
+        if (player == 2)
+            word = word + " \"O\":";
+        mText.setString(word);
+        mText.setOrigin(mText.getGlobalBounds().width / 2, mText.getGlobalBounds().height / 2);
+        mText.setPosition(120, 725);
+        mText.setFillColor(sf::Color::Black);
+    }
 }
     //Drawing the image to the window
     void draw(sf::RenderWindow* window);

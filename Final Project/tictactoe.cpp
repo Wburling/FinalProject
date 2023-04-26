@@ -8,6 +8,10 @@ vector<int> player1;
 vector<int> player2;
 
 void start() {
+    whoWon = 0;
+    turnCount = 0;
+    player1.clear();
+    player2.clear();
     sf::RenderWindow window(sf::VideoMode(1000, 800), "Tic Tac Toe!");
     TicTacToe Background;
     TicTacToe Player1("black.jpg", 1);
@@ -26,6 +30,7 @@ void start() {
     TicTacToe grayBox7("grayBox.png", 313, 593, 0.6,7);
     TicTacToe grayBox8("grayBox.png", 500, 593, 0.6,8);
     TicTacToe grayBox9("grayBox.png", 687, 593, 0.6,9);
+    TicTacToe replay("grayBox.png", 313, 500);
     while (window.isOpen())
     {
         sf::Event event;
@@ -43,6 +48,9 @@ void start() {
             grayBox7.update(event,window);
             grayBox8.update(event,window);
             grayBox9.update(event,window);
+            if (whoWon > 0) {
+                replay.update(event, window);
+            }
         }
         window.clear();
         Background.draw(&window);
@@ -58,12 +66,15 @@ void start() {
         grayBox9.draw(&window);
         if(whoWon == 1) {
             Player1.draw(&window);
+            replay.draw(&window);
         }
         if(whoWon == 2) {
             Player2.draw(&window);
+            replay.draw(&window);
         }
         if(whoWon == 3) {
             PlayerCat.draw(&window);
+            replay.draw(&window);
         }
         if(whoWon == 0) {
             if (turnCount % 2 != 0)
@@ -106,8 +117,14 @@ if(mouseInButton)
 {
 //mSprite.setScale(0,0);
 std::cout << "Pressed" << endl;
-replace(&mSprite);
-alreadyPassed = true;
+if (whoWon > 0) {
+    window.close();
+    start();
+}
+else {
+    replace(&mSprite);
+    alreadyPassed = true;
+}
 }
 else
 {
