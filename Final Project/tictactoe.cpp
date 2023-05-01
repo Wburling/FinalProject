@@ -12,7 +12,9 @@ void start() {
     turnCount = 0;
     player1.clear();
     player2.clear();
-    sf::RenderWindow window(sf::VideoMode(1000, 800), "Tic Tac Toe!");
+    //sf::RenderWindow window(sf::VideoMode(1000, 800), "Tic Tac Toe!");
+    sf::RenderWindow window(sf::VideoMode(1000, 800, 32), "window", sf::Style::Close);
+
     sf::Vector2f Center(1000, 1000);
     sf::Vector2f HalfSize(400, 300);
     sf::View View1(Center, HalfSize);
