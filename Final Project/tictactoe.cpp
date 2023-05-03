@@ -57,6 +57,7 @@ void start() {
                 replay.update(event, window);
             }
         }
+        window.setSize(sf::Vector2u(1000, 800));
         window.clear();
         Background.draw(&window);
         board.draw(&window);
