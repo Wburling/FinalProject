@@ -1,5 +1,4 @@
-
-#Tic Tac Toe
+Tic Tac Toe!
 
 Authors: Wyatt Burlingame, Jack Gauvin
 
@@ -9,8 +8,9 @@ Its basic tic tac toe....
 
 You can win as Player 1
 
-
 You can win as Player 2
+
+![image](https://user-images.githubusercontent.com/82528319/236279653-a2f6b970-5bb5-4dd6-82bf-1265223a6746.png)
 
 
 And you can get a catscratch
