@@ -36,3 +36,5 @@ it starts out looking like a blank board
 
 ### Jack:
   I would probably add an option to choose different fonts or color schemes. It would improve customizability within the game and make it feel more immersive.
+### Wyatt: 
+  I would have implemented an AI option. Like player vs player and a player vs computer option on a menu screen. 
