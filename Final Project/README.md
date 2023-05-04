@@ -32,4 +32,6 @@ The game uses a vector of win cases and checks each time a player takes their tu
 You win just by getting three in a row!!!
 
 
+Things we would improve:
 
+Jack - I would probably add an option to choose different fonts or color schemes. It would improve customizability within the game and make it feel more immersive.
